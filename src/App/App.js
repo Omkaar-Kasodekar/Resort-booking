@@ -12,6 +12,9 @@ import Error from "../Pages/Error";
 // import components
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
+import RegistrationForm from "../Components/RegistrationForm/RegistrationForm";
+import LoginForm from "../Components/LoginForm/LoginForm"
+
 
 function App() {
   return (
@@ -21,7 +24,10 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/rooms/" component={Room} />
         <Route exact path="/rooms/:slug" component={SingleRoom} />
+        <Route exact path="/register" component={RegistrationForm} />
+        <Route exact path="/login" component={LoginForm} />
         <Route component={Error} />
+        
       </Switch>
       <Footer />
     </>

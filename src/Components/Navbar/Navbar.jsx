@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-
-// import react-router-dom
 import { Link } from "react-router-dom";
-
-// import assets
-import Logo from "../../assets/img/svg/secrets-resorts-and-spas-logo-vector.png";
 import { FaAlignRight } from "react-icons/fa";
+import Logo from "../../assets/img/svg/secrets-resorts-and-spas-logo-vector.png";
 
 export default class Navbar extends Component {
   state = {
     isOpen: false,
   };
+
   handleToggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
@@ -34,7 +31,8 @@ export default class Navbar extends Component {
               <FaAlignRight className="nav-icon" />
             </button>
           </div>
-          {/* navbar link */}
+
+          {/* navbar links */}
           <ul
             className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
           >
@@ -43,6 +41,13 @@ export default class Navbar extends Component {
             </li>
             <li>
               <Link to="/rooms">Rooms</Link>
+            </li>
+            {/* Login and Register buttons */}
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/register">Register</Link>
             </li>
           </ul>
         </div>
